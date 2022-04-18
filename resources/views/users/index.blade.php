@@ -1,29 +1,35 @@
 @extends('../layouts/app')
 @section('content')
  <!-- explorer_europe start  -->
- <div class="explorer_europe list_wrap">
+ <div class="explorer_europe list_wrap" style="background-color: #052e54;">
     <div class="container">
         <div class="row">
             <div class="filter_wrap">
-                <h3 class="exp_title">Majlis honasini qo'shish</h3>
+                <h3 class="exp_title" style="color: #f9f9ff;">Majlis xonasini qo'shish</h3>
                 <div class="filter_main_wrap">
                     <div class="filter_inner">
-                        <form action="#">
+                        <form action="#" method="GET">
                             <div class="input_field">
-                                <input type="text" placeholder="What are you finding?" >
-                                <button class="submit_btn" type="submit"> <i class="fa fa-search"></i> </button>
+                                <label for="test2" style="color: #f9f9ff;">Tashkilot yoki bino nomi:</label>
+                                <input type="text" id="test2" placeholder="Name" >
+                            </div>
+                            <div class="input_field">
+                                <input type="text" placeholder="test" >
+                            </div>
+                            <div class="input_field">
+                                <input type="text" id="address" placeholder="Viloyat/tuman ..." >
                             </div>
                             <div class="input_field">
                                 <select class="wide">
-                                    <option data-display="Choose categories">cat 1</option>
-                                    <option value="1">cat 2</option>
-                                    <option value="2">cat 3</option>
-                                    <option value="3">cat 4</option>
+                                    <option data-display="Xona kategoriyalarni tanlang">Oddiy</option>
+                                    <option value="1">Bo'sh</option>
+                                    <option value="2">O'rta</option>
+                                    <option value="3">Maxsus</option>
                                 </select>
                             </div>
                             <div class="input_field">
                                 <select class="wide">
-                                    <option data-display="Joylashgan manzil">Xorazm</option>
+                                    <option data-display="Joylashgan viloyati: ">Xorazm</option>
                                     <option value="1">Toshkent</option>
                                     <option value="2">Samarqand</option>
                                     <option value="3">Buxoro</option>
@@ -31,43 +37,64 @@
                                     <option value="5">Nukus</option>
                                 </select>
                             </div>
-                            <div class="input_field ">
-                                <div class="inner">
-                                    <div class="check_1">
-                                        <input type="checkbox" id="fruit1" name="fruit-1" value="Apple">
-                                        <label for="fruit1">Open Now</label>
-                                    </div>
-                                    <div class="check_1">
-                                        <input type="checkbox" id="fruit4" name="fruit-4" value="Strawberry">
-                                        <label for="fruit4">Ratings</label>
+                            <div>
+                                <label for="" style="color: #f9f9ff;">Qo'shimcha imkoniyatlar</label>
+                                <div class="input_field " >
+                                    <div class="inner" id="imkoniyatlar">
+                                        <div class="check_1">
+                                            <input type="checkbox" id="fruit1" name="fruit-1" value="#">
+                                            <label for="fruit1" style="color: #f9f9ff;">Coffee / Choy</label>
+                                        </div>
+                                        <div class="check_1">
+                                            <input type="checkbox" id="fruit2" name="fruit-2" value="#">
+                                            <label for="fruit2" style="color: #f9f9ff;">Ovqatlanish imkoniyati</label>
+                                        </div>
+                                        <div class="check_1">
+                                            <input type="checkbox" id="fruit3" name="fruit-3" value="#">
+                                            <label for="fruit3" style="color: #f9f9ff;">Konditsioner</label>
+                                        </div>
+                                        <div class="check_1">
+                                            <input type="checkbox" id="fruit4" name="fruit-4" value="#">
+                                            <label for="fruit4" style="color: #f9f9ff;">Hojatxona</label>
+                                        </div>
+                                        <div class="check_1">
+                                            <input type="checkbox" id="fruit5" name="fruit-5" value="#">
+                                            <label for="fruit5" style="color: #f9f9ff;">Proyektr</label>
+                                        </div>
+                                        <div class="check_1">
+                                            <input type="checkbox" id="fruit6" name="fruit-6" value="#">
+                                            <label for="fruit6" style="color: #f9f9ff;">Wi-fi</label>
+                                        </div>
+                                        <div class="check_1">
+                                            <input type="checkbox" id="fruit7" name="fruit-7" value="#">
+                                            <label for="fruit7" style="color: #f9f9ff;">Ovoz kuchaytirgich</label>
+                                        </div>
+                                        <div class="check_1">
+                                            <input type="checkbox" id="fruit8" name="fruit-8" value="#">
+                                            <label for="fruit8" style="color: #f9f9ff;">Kompyuterlar xizmati</label>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="input_field">
-                                <select class="wide">
-                                    <option data-display="Area (km)">Area (km)</option>
-                                    <option value="1">1km</option>
-                                    <option value="2">2km</option>
-                                </select>
-                            </div>
-                            <div class="input_field">
-                                <select class="wide">
-                                    <option data-display="Area (km)">Area (km)</option>
-                                    <option value="1">1km</option>
-                                    <option value="2">2km</option>
-                                </select>
-                            </div>
+                            <div class="last_range">
+                                <label for="amount" style="color: #f9f9ff;">O'rindiqlar soni</label>
 
+                                <div id="slider-range"></div>
+                                <p>
+                                    <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+                                </p>
+                                <div class="input_field">
+                                    <input type="text" placeholder="1 soat uchun qo'yiladigan summan">
+                                </div>
+                                <div class="input_field">
+                                    <div class="mb-3">
+                                        <label for="formFileMultiple" style="color: #f9f9ff;" class="form-label">Fotosuratlarni joylang</label>
+                                        <input class="form-control" type="file" id="formFileMultiple" multiple>
+                                    </div>
+                                </div>
+                                <button class="boxed-btn2" >Add</button>
+                            </div>
                         </form>
-                    </div>
-                    <div class="last_range">
-                        <label for="amount">Price range:</label>
-
-                        <div id="slider-range"></div>
-                        <p>
-                            <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
-                        </p>
-                        <button class="boxed-btn2" >Reset</button>
                     </div>
                 </div>
             </div>
@@ -112,4 +139,19 @@
     <script src="{{ asset('assets/js/mail-script.js')}}"></script>
 
     <script src="{{ asset('assets/js/main.js')}}"></script>
+    <script>
+            $( function() {
+                $( "#slider-range" ).slider({
+                    range: true,
+                    min: 0,
+                    max: 500,
+                    values: [ 75, 300 ],
+                    slide: function( event, ui ) {
+                        $( "#amount" ).val( ui.values[ 0 ] + " - " + ui.values[ 1 ] );
+                    }
+                });
+                $( "#amount" ).val( $( "#slider-range" ).slider( "values", 0 ) +
+                    " - " + $( "#slider-range" ).slider( "values", 1 ) );
+            } );
+            </script>
 @endsection
