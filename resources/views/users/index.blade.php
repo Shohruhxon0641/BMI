@@ -79,12 +79,11 @@
                             <div class="last_range">
                                 <label for="amount" style="color: #f9f9ff;">O'rindiqlar soni</label>
 
-                                <div id="slider-range"></div>
-                                <p>
-                                    <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
-                                </p>
+                                <div class="input_field" >
+                                    <input type="text"  placeholder="Qancha mijozga mo'jjallangan:">
+                                </div>
                                 <div class="input_field">
-                                    <input type="text" placeholder="1 soat uchun qo'yiladigan summan">
+                                    <input type="text" placeholder="1 soat uchun qo'yiladigan summa">
                                 </div>
                                 <div class="input_field">
                                     <div class="mb-3">
@@ -139,19 +138,5 @@
     <script src="{{ asset('assets/js/mail-script.js')}}"></script>
 
     <script src="{{ asset('assets/js/main.js')}}"></script>
-    <script>
-            $( function() {
-                $( "#slider-range" ).slider({
-                    range: true,
-                    min: 0,
-                    max: 500,
-                    values: [ 75, 300 ],
-                    slide: function( event, ui ) {
-                        $( "#amount" ).val( ui.values[ 0 ] + " - " + ui.values[ 1 ] );
-                    }
-                });
-                $( "#amount" ).val( $( "#slider-range" ).slider( "values", 0 ) +
-                    " - " + $( "#slider-range" ).slider( "values", 1 ) );
-            } );
-            </script>
 @endsection
+
