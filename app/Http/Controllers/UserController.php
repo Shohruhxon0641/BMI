@@ -13,7 +13,11 @@ class UserController extends Controller
      */
     public function index()
     {
-        return view('users.index', ['metaTitle' => 'Users']);
+        // $companies = Company::orderByDesc('created_at')->paginate(20);
+
+        return view('users.index',[
+            'metaTitle' => 'Users Room List'
+        ]);
     }
 
     /**
@@ -23,7 +27,9 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        return view('users.create', [
+            'metaTitle' => 'Room create'
+        ]);
     }
 
     /**

@@ -29,6 +29,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/animate.css')}}">
     <link rel="stylesheet" href="{{ asset('assets/css/slick.css')}}">
     <link rel="stylesheet" href="{{ asset('assets/css/slicknav.css')}}">
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css')}}">
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css">
 
     <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
@@ -69,7 +70,7 @@
                                     <nav>
                                         <ul id="navigation">
                                             <li><a href="{{ url('/home') }}">{{__('Home')}}</a></li>
-                                            <li><a href="{{ url('/users') }}">{{__('Users')}}</a></li>
+                                            <li><a href="{{ url('/users ') }}">{{__('Users')}}</a></li>
                                             <li><a href="{{ url('/rooms') }}">{{__('Rooms')}}</a></li>
                                             <li><a href="#">pages <i class="ti-angle-down"></i></a>
                                                 <ul class="submenu">

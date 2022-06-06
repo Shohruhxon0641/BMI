@@ -3,96 +3,14 @@
  <!-- explorer_europe start  -->
  <div class="explorer_europe list_wrap" style="background-color: #052e54;">
     <div class="container">
+        <!-- <button href="{{ url('/users.create') }}">Create Rooms</button> -->
+        <a href="{{url('/users/create')}}" class="btn"> create</a>
         <div class="row">
             <div class="filter_wrap">
-                <h3 class="exp_title" style="color: #f9f9ff;">Majlis xonasini qo'shish</h3>
                 <div class="filter_main_wrap">
                     <div class="filter_inner">
                         <form action="#" method="GET">
-                            <div class="input_field">
-                                <label for="test2" style="color: #f9f9ff;">Tashkilot yoki bino nomi:</label>
-                                <input type="text" id="test2" placeholder="Name" >
-                            </div>
-                            <div class="input_field">
-                                <input type="text" placeholder="test" >
-                            </div>
-                            <div class="input_field">
-                                <input type="text" id="address" placeholder="Viloyat/tuman ..." >
-                            </div>
-                            <div class="input_field">
-                                <select class="wide">
-                                    <option data-display="Xona kategoriyalarni tanlang">Oddiy</option>
-                                    <option value="1">Bo'sh</option>
-                                    <option value="2">O'rta</option>
-                                    <option value="3">Maxsus</option>
-                                </select>
-                            </div>
-                            <div class="input_field">
-                                <select class="wide">
-                                    <option data-display="Joylashgan viloyati: ">Xorazm</option>
-                                    <option value="1">Toshkent</option>
-                                    <option value="2">Samarqand</option>
-                                    <option value="3">Buxoro</option>
-                                    <option value="4">Andijon</option>
-                                    <option value="5">Nukus</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label for="" style="color: #f9f9ff;">Qo'shimcha imkoniyatlar</label>
-                                <div class="input_field " >
-                                    <div class="inner" id="imkoniyatlar">
-                                        <div class="check_1">
-                                            <input type="checkbox" id="fruit1" name="fruit-1" value="#">
-                                            <label for="fruit1" style="color: #f9f9ff;">Coffee / Choy</label>
-                                        </div>
-                                        <div class="check_1">
-                                            <input type="checkbox" id="fruit2" name="fruit-2" value="#">
-                                            <label for="fruit2" style="color: #f9f9ff;">Ovqatlanish imkoniyati</label>
-                                        </div>
-                                        <div class="check_1">
-                                            <input type="checkbox" id="fruit3" name="fruit-3" value="#">
-                                            <label for="fruit3" style="color: #f9f9ff;">Konditsioner</label>
-                                        </div>
-                                        <div class="check_1">
-                                            <input type="checkbox" id="fruit4" name="fruit-4" value="#">
-                                            <label for="fruit4" style="color: #f9f9ff;">Hojatxona</label>
-                                        </div>
-                                        <div class="check_1">
-                                            <input type="checkbox" id="fruit5" name="fruit-5" value="#">
-                                            <label for="fruit5" style="color: #f9f9ff;">Proyektr</label>
-                                        </div>
-                                        <div class="check_1">
-                                            <input type="checkbox" id="fruit6" name="fruit-6" value="#">
-                                            <label for="fruit6" style="color: #f9f9ff;">Wi-fi</label>
-                                        </div>
-                                        <div class="check_1">
-                                            <input type="checkbox" id="fruit7" name="fruit-7" value="#">
-                                            <label for="fruit7" style="color: #f9f9ff;">Ovoz kuchaytirgich</label>
-                                        </div>
-                                        <div class="check_1">
-                                            <input type="checkbox" id="fruit8" name="fruit-8" value="#">
-                                            <label for="fruit8" style="color: #f9f9ff;">Kompyuterlar xizmati</label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="last_range">
-                                <label for="amount" style="color: #f9f9ff;">O'rindiqlar soni</label>
 
-                                <div class="input_field" >
-                                    <input type="text"  placeholder="Qancha mijozga mo'jjallangan:">
-                                </div>
-                                <div class="input_field">
-                                    <input type="text" placeholder="1 soat uchun qo'yiladigan summa">
-                                </div>
-                                <div class="input_field">
-                                    <div class="mb-3">
-                                        <label for="formFileMultiple" style="color: #f9f9ff;" class="form-label">Fotosuratlarni joylang</label>
-                                        <input class="form-control" type="file" id="formFileMultiple" multiple>
-                                    </div>
-                                </div>
-                                <button class="boxed-btn2" >Add</button>
-                            </div>
                         </form>
                     </div>
                 </div>
@@ -101,6 +19,160 @@
     </div>
 </div>
 <!--/ explorer_europe start  -->
+
+<!-- Start Align Area -->
+<div class="whole-wrap">
+		<div class="container box_1170">
+
+			<div class="section-top-border">
+				<h3 class="mb-30">Table</h3>
+				<div class="progress-table-wrap">
+					<div class="progress-table">
+						<div class="table-head">
+							<div class="serial">#</div>
+							<div class="country">Countries</div>
+							<div class="visit">Visits</div>
+							<div class="percentage">Percentages</div>
+						</div>
+						<div class="table-row">
+							<div class="serial">01</div>
+							<div class="country"> <img src="{{ asset('assets/img/elements/f1.jpg') }}" alt="flag">Canada</div>
+							<div class="visit">645032</div>
+							<div class="percentage">
+								<div class="progress">
+									<div class="progress-bar color-1" role="progressbar" style="width: 80%"
+										aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+								</div>
+							</div>
+						</div>
+						<div class="table-row">
+							<div class="serial">02</div>
+							<div class="country"> <img src="{{ asset('assets/img/elements/f2.jpg') }}" alt="flag">Canada</div>
+							<div class="visit">645032</div>
+							<div class="percentage">
+								<div class="progress">
+									<div class="progress-bar color-2" role="progressbar" style="width: 30%"
+										aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+								</div>
+							</div>
+						</div>
+						<div class="table-row">
+							<div class="serial">03</div>
+							<div class="country"> <img src="{{ asset('assets/img/elements/f3.jpg') }}" alt="flag">Canada</div>
+							<div class="visit">645032</div>
+							<div class="percentage">
+								<div class="progress">
+									<div class="progress-bar color-3" role="progressbar" style="width: 55%"
+										aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+								</div>
+							</div>
+						</div>
+						<div class="table-row">
+							<div class="serial">04</div>
+							<div class="country"> <img src="{{ asset('assets/img/elements/f4.jpg') }}" alt="flag">Canada</div>
+							<div class="visit">645032</div>
+							<div class="percentage">
+								<div class="progress">
+									<div class="progress-bar color-4" role="progressbar" style="width: 60%"
+										aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+								</div>
+							</div>
+						</div>
+						<div class="table-row">
+							<div class="serial">05</div>
+							<div class="country"> <img src="{{ asset('assets/img/elements/f5.jpg') }}" alt="flag">Canada</div>
+							<div class="visit">645032</div>
+							<div class="percentage">
+								<div class="progress">
+									<div class="progress-bar color-5" role="progressbar" style="width: 40%"
+										aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+								</div>
+							</div>
+						</div>
+						<div class="table-row">
+							<div class="serial">06</div>
+							<div class="country"> <img src="{{ asset('assets/img/elements/f6.jpg') }}" alt="flag">Canada</div>
+							<div class="visit">645032</div>
+							<div class="percentage">
+								<div class="progress">
+									<div class="progress-bar color-6" role="progressbar" style="width: 70%"
+										aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+								</div>
+							</div>
+						</div>
+						<div class="table-row">
+							<div class="serial">07</div>
+							<div class="country"> <img src="{{ asset('assets/img/elements/f7.jpg') }}" alt="flag">Canada</div>
+							<div class="visit">645032</div>
+							<div class="percentage">
+								<div class="progress">
+									<div class="progress-bar color-7" role="progressbar" style="width: 30%"
+										aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+								</div>
+							</div>
+						</div>
+						<div class="table-row">
+							<div class="serial">08</div>
+							<div class="country"> <img src="{{ asset('assets/img/elements/f8.jpg') }}" alt="flag">Canada</div>
+							<div class="visit">645032</div>
+							<div class="percentage">
+								<div class="progress">
+									<div class="progress-bar color-8" role="progressbar" style="width: 60%"
+										aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="section-top-border">
+				<h3>Image Gallery</h3>
+				<div class="row gallery-item">
+					<div class="col-md-4">
+						<a href="{{ asset('assets/img/elements/g1.jpg') }}" class="img-pop-up">
+							<div class="single-gallery-image" style="background: url({{ asset('assets/img/elements/g1.jpg') }});"></div>
+						</a>
+					</div>
+					<div class="col-md-4">
+						<a href="{{ asset('assets/img/elements/g2.jpg') }}" class="img-pop-up">
+							<div class="single-gallery-image" style="background: url({{ asset('assets/img/elements/g2.jpg') }});"></div>
+						</a>
+					</div>
+					<div class="col-md-4">
+						<a href="{{ asset('assets/img/elements/g3.jpg') }}" class="img-pop-up">
+							<div class="single-gallery-image" style="background: url({{ asset('assets/img/elements/g3.jpg') }});"></div>
+						</a>
+					</div>
+					<div class="col-md-6">
+						<a href="{{ asset('assets/img/elements/g4.jpg') }}" class="img-pop-up">
+							<div class="single-gallery-image" style="background: url({{ asset('assets/img/elements/g4.jpg') }});"></div>
+						</a>
+					</div>
+					<div class="col-md-6">
+						<a href="{{ asset('assets/img/elements/g5.jpg') }}" class="img-pop-up">
+							<div class="single-gallery-image" style="background: url({{ asset('assets/img/elements/g5.jpg') }});"></div>
+						</a>
+					</div>
+					<div class="col-md-4">
+						<a href="{{ asset('assets/img/elements/g6.jpg') }}" class="img-pop-up">
+							<div class="single-gallery-image" style="background: url({{ asset('assets/img/elements/g6.jpg') }});"></div>
+						</a>
+					</div>
+					<div class="col-md-4">
+						<a href="{{ asset('assets/img/elements/g7.jpg') }}" class="img-pop-up">
+							<div class="single-gallery-image" style="background: url({{ asset('assets/img/elements/g7.jpg') }});"></div>
+						</a>
+					</div>
+					<div class="col-md-4">
+						<a href="{{ asset('assets/img/elements/g8.jpg') }}" class="img-pop-up">
+							<div class="single-gallery-image" style="background: url({{ asset('assets/img/elements/g8.jpg') }});"></div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Align Area -->
 @endsection
 @section('script')
 
@@ -127,7 +199,7 @@
     <script src="{{ asset('assets/js/plugins.js')}}"></script>
     <script src="{{asset('assets/js/jquery-ui.js')}}"></script>
 
-    <script src="js/gijgo.min.js"></script>
+    <script src="{{asset('assets/js/gijgo.min.js') }}"></script>
     <script src="{{asset('assets/js/slick.min.js')}}"></script>
 
     <!--contact js-->

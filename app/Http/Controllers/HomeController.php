@@ -21,11 +21,11 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
+    
     public function index()
     {
         return view('home', ['metaTitle' => 'Home']);
     }
-
     public function rooms()
     {
         return view('rooms', ['metaTitle' =>'Rooms']);
@@ -34,15 +34,13 @@ class HomeController extends Controller
     {
         return view('about', ['metaTitle' => 'About']);
     }
-
     public function contact()
     {
         return view('contact', ['metaTitle' => 'Contact']);
     }
-
     public function elements()
     {
-        return view('elements', ['metaTitle' => 'Room list']);
+        return view('elements', ['metaTitle' => 'Element list']);
     }
     public function singleList()
     {

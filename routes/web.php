@@ -42,4 +42,6 @@ Route::get('/blog', [HomeController::class, 'blog'])->name('blog');
 
 Route::get('/singleBlog', [HomeController::class, 'singleBlog'])->name('singleBlog');
 
-Route::get('/users', [UserController::class, 'index'])->name('users')->middleware('auth');
+// Route::get('/users', [UserController::class, 'index'])->name('users')->middleware('auth');
+
+Route::resource('users', UserController::class)->middleware('auth');
