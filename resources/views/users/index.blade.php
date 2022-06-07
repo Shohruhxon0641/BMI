@@ -1,24 +1,19 @@
 @extends('../layouts/app')
 @section('content')
- <!-- explorer_europe start  -->
- <div class="explorer_europe list_wrap" style="background-color: #052e54;">
+<!-- bradcam_area  -->
+<div class="bradcam_area bradcam_bg_2" style="background-color: #052e54;">
     <div class="container">
-        <!-- <button href="{{ url('/users.create') }}">Create Rooms</button> -->
-        <a href="{{url('/users/create')}}" class="btn"> create</a>
         <div class="row">
-            <div class="filter_wrap">
-                <div class="filter_main_wrap">
-                    <div class="filter_inner">
-                        <form action="#" method="GET">
-
-                        </form>
-                    </div>
+            <div class="col-xl-12">
+                <div class="bradcam_text text-center">
+                    <h3>Sizning Xonalaringiz</h3>
+                    <a href="{{url('/users/create')}}" class="genric-btn success radius">Create Room</a>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<!--/ explorer_europe start  -->
+<!--/ bradcam_area  -->
 
 <!-- Start Align Area -->
 <div class="whole-wrap">
@@ -51,7 +46,7 @@
 							<div class="visit">645032</div>
 							<div class="percentage">
 								<div class="progress">
-									<div class="progress-bar color-2" role="progressbar" style="width: 30%"
+									<div class="progress-bar color-2" role="progressbar" style="width: 100%"
 										aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
 								</div>
 							</div>
