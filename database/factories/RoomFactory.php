@@ -20,9 +20,24 @@ class RoomFactory extends Factory
     public function definition()
     {
         return [
-            'name' => $this->faker->name,
+            'user_id' => $this->faker->numberBetween($min = 1, $max = 50),
+            'bino_name' => $this->faker->company,
+            'turi' => $this->faker->randomLetter,
+            'urindiq_son' => $this->faker->numberBetween($min = 10, $max = 500),
+            'narx' => $this->faker->numberBetween($min = 100000, $max = 1000000),
+            'viloyat' => $this->faker->state,
             'address' =>$this->faker->address,
-            'phone' =>$this->faker->e164PhoneNumber
+            'phone_number' =>$this->faker->e164PhoneNumber,
+            'email' => $this->faker->email,
+            'cofe_tea' => $this->faker->boolean,
+            'sovutish' => $this->faker->boolean,
+            'wi_fi' => $this->faker->boolean,
+            'hojatxona' => $this->faker->boolean,
+            'proyektr' => $this->faker->boolean,
+            'ovoz_kuch' =>$this->faker->boolean,
+            'kompyuter' => $this->faker->boolean,
+            'ovqatlanish' => $this->faker->boolean,
+            'image' => $this->faker->imageUrl($width = 640, $height = 480)
         ];
     }
 }
