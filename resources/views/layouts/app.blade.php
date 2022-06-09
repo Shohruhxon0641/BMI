@@ -61,7 +61,7 @@
                             <div class="col-xl-3 col-lg-2">
                                 <div class="logo">
                                     <a href="{{ url('/') }}">
-                                        <img src="{{asset('assets/img/logo.png')}}" alt="">
+                                        <img style="width: 300px; heiht: 150px;" src="{{asset('assets/img/0222.png')}}" alt="">
                                     </a>
                                 </div>
                             </div>
@@ -71,22 +71,22 @@
                                         <ul id="navigation">
                                             <li><a href="{{ url('/home') }}">{{__('Home')}}</a></li>
                                             <li><a href="{{ url('/users ') }}">{{__('Users')}}</a></li>
-                                            <li><a href="{{ url('/rooms') }}">{{__('Rooms')}}</a></li>
+                                            <li><a href="{{ url('/rooms') }}">{{__('Xonalar')}}</a></li>
                                             <li><a href="#">pages <i class="ti-angle-down"></i></a>
                                                 <ul class="submenu">
 
-                                                    <li><a href="{{ url('/elements') }}">{{__('Elements')}}</a></li>
-                                                    <li><a href="{{ url('/singleList') }}">{{__('Single listing')}}</a></li>
+                                                    <li><a href="{{ url('/elements') }}">{{__('Elementlar')}}</a></li>
+                                                    <li><a href="{{ url('/singleList') }}">{{__("Maxsus ro'yhat")}}</a></li>
                                                 </ul>
                                             </li>
                                             <li><a href="{{ url('/about') }}">{{__('About')}}</a></li>
                                             <li><a href="#">blog <i class="ti-angle-down"></i></a>
                                                 <ul class="submenu">
-                                                    <li><a href="{{ url('/blog') }}">{{__('blog')}}</a></li>
-                                                    <li><a href="{{ url('/singleBlog') }}">{{__('single-blog')}}</a></li>
+                                                    <li><a href="{{ url('/blog') }}">{{__('Xonalar')}}</a></li>
+                                                    <li><a href="{{ url('/singleBlog') }}">{{__('Fikrlar')}}</a></li>
                                                 </ul>
                                             </li>
-                                            <li><a href="{{ url('contact') }}">{{__('Contact')}}</a></li>
+                                            <li><a href="{{ url('contact') }}">{{__('Aloqa')}}</a></li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -155,7 +155,7 @@
                         <div class="footer_widget">
                             <div class="footer_logo">
                                 <a href="{{url('/')}}">
-                                    <img src="{{asset('assets/img/footer_logo.png')}}" alt="">
+                                    <img style="width: 300px; heiht: 150px;" src="{{asset('assets/img/0222.png')}}" alt="">
                                 </a>
                             </div>
                             <p>

@@ -7,7 +7,7 @@
             <div class="row">
                 <div class="col-xl-12">
                     <div class="bradcam_text text-center">
-                        <h3>Contact</h3>
+                        <h3>Biz bilan bog'lanish</h3>
                     </div>
                 </div>
             </div>
@@ -18,36 +18,12 @@
   <section class="contact-section section_padding">
     <div class="container">
       <div class="d-none d-sm-block mb-5 pb-4">
-        <!-- <div id="map" style="height: 480px;"></div>
-            <script>
-                function initMap() {
-                    var uluru = {lat: -25.363, lng: 131.044};
-                    var grayStyles = [
-                    {
-                        featureType: "all",
-                        stylers: [
-                        { saturation: -90 },
-                        { lightness: 50 }
-                        ]
-                    },
-                    {elementType: 'labels.text.fill', stylers: [{color: '#ccdee9'}]}
-                    ];
-                    var map = new google.maps.Map(document.getElementById('map'), {
-                    center: {lat: -31.197, lng: 150.744},
-                    zoom: 9,
-                    styles: grayStyles,
-                    scrollwheel:  false
-                    });
-                }
-            </script>
-            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpfS1oRGreGSBU5HHjMmQ3o5NLw7VdJ6I&callback=initMap"></script>
 
-        </div> -->
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7295855.845003932!2d59.16208285723054!3d41.33856511333337!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b20a5d676b1%3A0xca0a6dad7e841e20!2sO%60zbekiston!5e0!3m2!1suz!2s!4v1649440185261!5m2!1suz!2s" width="1100" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 
       <div class="row">
-        <div class="col-12">
+        <div class="col-12 mt-5" >
           <h2 class="contact-title">Biz bilan bog'laning</h2>
         </div>
         <div class="col-lg-8">
@@ -76,7 +52,7 @@
               </div>
             </div>
             <div class="form-group mt-3">
-              <button type="submit" class="button button-contactForm btn_4 boxed-btn">Send Message</button>
+              <button type="submit" class="button button-contactForm btn_4 boxed-btn">Xabar jo'natish</button>
             </div>
           </form>
         </div>
@@ -84,22 +60,22 @@
           <div class="media contact-info">
             <span class="contact-info__icon"><i class="ti-home"></i></span>
             <div class="media-body">
-              <h3>Buttonwood, California.</h3>
-              <p>Rosemead, CA 91770</p>
+              <h3>TATU Urganch filiali</h3>
+              <p>AL-XORAZMIY, 110</p>
             </div>
           </div>
           <div class="media contact-info">
             <span class="contact-info__icon"><i class="ti-tablet"></i></span>
             <div class="media-body">
-              <h3>00 (440) 9865 562</h3>
-              <p>Mon to Fri 9am to 6pm</p>
+              <h3>+998 (97) 602-49-22</h3>
+              <p>Murojat 8:00 do 22:00 </p>
             </div>
           </div>
           <div class="media contact-info">
             <span class="contact-info__icon"><i class="ti-email"></i></span>
             <div class="media-body">
-              <h3>support@colorlib.com</h3>
-              <p>Send us your query anytime!</p>
+              <h3>mey1li2bo0yev3@gmail.com</h3>
+              <p>Istalgan vaqtda bizga so'rovingizni yuboring!</p>
             </div>
           </div>
         </div>

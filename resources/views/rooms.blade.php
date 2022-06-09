@@ -8,7 +8,7 @@
                 <div class="row align-items-center justify-content-center">
                     <div class="col-xl-10">
                         <div class="slider_text text-center justify-content-center">
-                            <h3>Our Listings</h3>
+                            <h3>Bizning ro'yxatlarimiz</h3>
                             <div class="search_form">
                                 <form action="#">
                                     <div class="row align-items-center">
@@ -44,7 +44,7 @@
             <div class="row">
                 <div class="col-xl-4 col-lg-4">
                     <div class="filter_wrap">
-                        <h3 class="exp_title">Advanced Filter</h3>
+                        <h3 class="exp_title">Kengaytirilgan Saralash</h3>
                         <div class="filter_main_wrap">
                             <div class="filter_inner">
                                 <form action="#">

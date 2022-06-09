@@ -8,7 +8,7 @@
             <div class="row">
                 <div class="col-xl-12">
                     <div class="bradcam_text text-center">
-                        <h3>About Us</h3>
+                        <h3>Loyiha haqida ma'lumot</h3>
                     </div>
                 </div>
             </div>
@@ -21,18 +21,18 @@
             <div class="row align-items-center">
                 <div class="col-xl-6 col-md-6">
                     <div class="about_thumb">
-                        <img src="{{ asset('assets/img/about/about_big.png') }}" alt="">
+                        <img src="{{ asset('assets/img/about/002.png') }}" alt="">
                         <div class="small_img_1">
-                            <img src="{{ asset('assets/img/about/small_2.png') }}" alt="">
+                            <img src="{{ asset('assets/img/about/001.png') }}" alt="">
                         </div>
                         <div class="small_img_2">
-                            <img src="{{ asset('assets/img/about/small_1.png') }}" alt="">
+                            <img src="{{ asset('assets/img/about/003.jpeg') }}" alt="">
                         </div>
                     </div>
                 </div>
                 <div class="col-xl-6 col-md-6">
                     <div class="about_text">
-                        <h4>Our Mission</h4>
+                        <h4>Bizning loyihamiz</h4>
                         <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing.</p>
                     </div>
                 </div>
@@ -48,19 +48,19 @@
                     <div class="row">
                             <div class="col-xl-4 col-md-4">
                                 <div class="single_counter text-center">
-                                    <h3> <span  class="counter" >3782</span> </h3>
+                                    <h3> <span  class="counter" >82</span> </h3>
                                     <p>Listings Available</p>
                                 </div>
                             </div>
                             <div class="col-xl-4 col-md-4">
                                 <div class="single_counter text-center">
-                                    <h3> <span class="counter" >328</span></h3>
+                                    <h3> <span class="counter" >32</span></h3>
                                     <p>Added this Week</p>
                                 </div>
                             </div>
                             <div class="col-xl-4 col-md-4 ">
                                 <div class="single_counter text-center">
-                                    <h3> <span class="counter" >2263</span></h3>
+                                    <h3> <span class="counter" >226</span></h3>
                                     <p>Happy Clients</p>
                                 </div>
                             </div>
@@ -78,12 +78,39 @@
                             <div class="col-xl-12">
                                 <div class="section_title mb-40 text-center">
                                     <h3>
-                                        Our Team
+                                        Bizning Jamoa
                                     </h3>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
+                            <div class="col-xl-3 col-lg-3 col-md-6">
+                                <div class="single_team">
+                                    <div class="team_thumb">
+                                        <img src="{{ asset('assets/img/team/Shohruh.jpg') }}" alt="">
+                                        <div class="social_link">
+                                                <ul>
+                                                    <li><a href="#">
+                                                            <i class="fa fa-facebook"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li><a href="#">
+                                                            <i class="fa fa-twitter"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li><a href="#">
+                                                            <i class="fa fa-instagram"></i>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                    </div>
+                                    <div class="team_info text-center">
+                                        <h3>Meyliboyev Shohruhxon</h3>
+                                        <p>Dasturchi</p>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="col-xl-3 col-lg-3 col-md-6">
                                 <div class="single_team">
                                     <div class="team_thumb">
@@ -106,35 +133,8 @@
                                             </div>
                                     </div>
                                     <div class="team_info text-center">
-                                        <h3>Milani Mou</h3>
-                                        <p>Business Agent</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-3 col-md-6">
-                                <div class="single_team">
-                                    <div class="team_thumb">
-                                        <img src="{{ asset('assets/img/team/2.png') }}" alt="">
-                                        <div class="social_link">
-                                                <ul>
-                                                    <li><a href="#">
-                                                            <i class="fa fa-facebook"></i>
-                                                        </a>
-                                                    </li>
-                                                    <li><a href="#">
-                                                            <i class="fa fa-twitter"></i>
-                                                        </a>
-                                                    </li>
-                                                    <li><a href="#">
-                                                            <i class="fa fa-instagram"></i>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                    </div>
-                                    <div class="team_info text-center">
-                                        <h3>Halim Yoka</h3>
-                                        <p>Business Agent</p>
+                                        <h3>Gulimmatova Maftuna</h3>
+                                        <p>Loyihachi</p>
                                     </div>
                                 </div>
                             </div>
@@ -160,15 +160,15 @@
                                             </div>
                                     </div>
                                     <div class="team_info text-center">
-                                        <h3>Dalim Karma</h3>
-                                        <p>Business Agent</p>
+                                        <h3>Matkarimov Hayrulla</h3>
+                                        <p>Moliyachi</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-xl-3 col-lg-3 col-md-6">
                                 <div class="single_team">
                                     <div class="team_thumb">
-                                        <img src="{{ asset('assets/img/team/4.png') }}" alt="">
+                                        <img src="{{ asset('assets/img/team/sarvar2.jpg') }}" alt="">
                                         <div class="social_link">
                                                 <ul>
                                                     <li><a href="#">
@@ -187,8 +187,8 @@
                                             </div>
                                     </div>
                                     <div class="team_info text-center">
-                                        <h3>Micky</h3>
-                                        <p>Business Agent</p>
+                                        <h3>Matkarimov Sarvar</h3>
+                                        <p>Logotip asoschisi</p>
                                     </div>
                                 </div>
                             </div>
