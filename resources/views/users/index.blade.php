@@ -21,104 +21,60 @@
 
 			<div class="section-top-border">
 				<h3 class="mb-30">Table</h3>
-				<div class="progress-table-wrap">
+				<!-- <div class="progress-table-wrap">
 					<div class="progress-table">
+
 						<div class="table-head">
-							<div class="serial">#</div>
-							<div class="country">Countries</div>
-							<div class="visit">Visits</div>
-							<div class="percentage">Percentages</div>
+							<div class="serial">T/R</div>
+							<div class="country">Bino nomi</div>
+							<div class="visit">State</div>
+							<div class="percentage">NARXI</div>
+                            <div class="visit">State</div>
+                            <div class="visit">State</div>
 						</div>
-						<div class="table-row">
-							<div class="serial">01</div>
-							<div class="country"> <img src="{{ asset('assets/img/elements/f1.jpg') }}" alt="flag">Canada</div>
-							<div class="visit">645032</div>
-							<div class="percentage">
-								<div class="progress">
-									<div class="progress-bar color-1" role="progressbar" style="width: 80%"
-										aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-								</div>
-							</div>
-						</div>
-						<div class="table-row">
-							<div class="serial">02</div>
-							<div class="country"> <img src="{{ asset('assets/img/elements/f2.jpg') }}" alt="flag">Canada</div>
-							<div class="visit">645032</div>
-							<div class="percentage">
-								<div class="progress">
-									<div class="progress-bar color-2" role="progressbar" style="width: 100%"
-										aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
-								</div>
-							</div>
-						</div>
-						<div class="table-row">
-							<div class="serial">03</div>
-							<div class="country"> <img src="{{ asset('assets/img/elements/f3.jpg') }}" alt="flag">Canada</div>
-							<div class="visit">645032</div>
-							<div class="percentage">
-								<div class="progress">
-									<div class="progress-bar color-3" role="progressbar" style="width: 55%"
-										aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
-								</div>
-							</div>
-						</div>
-						<div class="table-row">
-							<div class="serial">04</div>
-							<div class="country"> <img src="{{ asset('assets/img/elements/f4.jpg') }}" alt="flag">Canada</div>
-							<div class="visit">645032</div>
-							<div class="percentage">
-								<div class="progress">
-									<div class="progress-bar color-4" role="progressbar" style="width: 60%"
-										aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-								</div>
-							</div>
-						</div>
-						<div class="table-row">
-							<div class="serial">05</div>
-							<div class="country"> <img src="{{ asset('assets/img/elements/f5.jpg') }}" alt="flag">Canada</div>
-							<div class="visit">645032</div>
-							<div class="percentage">
-								<div class="progress">
-									<div class="progress-bar color-5" role="progressbar" style="width: 40%"
-										aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-								</div>
-							</div>
-						</div>
-						<div class="table-row">
-							<div class="serial">06</div>
-							<div class="country"> <img src="{{ asset('assets/img/elements/f6.jpg') }}" alt="flag">Canada</div>
-							<div class="visit">645032</div>
-							<div class="percentage">
-								<div class="progress">
-									<div class="progress-bar color-6" role="progressbar" style="width: 70%"
-										aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-								</div>
-							</div>
-						</div>
-						<div class="table-row">
-							<div class="serial">07</div>
-							<div class="country"> <img src="{{ asset('assets/img/elements/f7.jpg') }}" alt="flag">Canada</div>
-							<div class="visit">645032</div>
-							<div class="percentage">
-								<div class="progress">
-									<div class="progress-bar color-7" role="progressbar" style="width: 30%"
-										aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
-								</div>
-							</div>
-						</div>
-						<div class="table-row">
-							<div class="serial">08</div>
-							<div class="country"> <img src="{{ asset('assets/img/elements/f8.jpg') }}" alt="flag">Canada</div>
-							<div class="visit">645032</div>
-							<div class="percentage">
-								<div class="progress">
-									<div class="progress-bar color-8" role="progressbar" style="width: 60%"
-										aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-								</div>
-							</div>
-						</div>
+
+                        @foreach($rooms as $room)
+                            <div class="table-row">
+                                <div class="serial">{{($loop -> index+1)}}</div>
+                                <div class="country"> {{$room -> bino_name}}</div>
+                                <div class="visit">{{$room -> viloyat}}</div>
+                                <div class="percentage">{{$room -> narx}}</div>
+                            </div>
+                        @endforeach
 					</div>
-				</div>
+				</div> -->
+                <table class="table table-bordered table-hover table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Bino nomi</th>
+                            <th scope="col">Viloyat</th>
+                            <th scope="col">Address</th>
+                            <th scope="col">Xona turi</th>
+                            <th scope="col">Urindiq son</th>
+                            <th scope="col">Narx</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Tel:</th>
+                            <th scope="col">Imkoniyatlari</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach($rooms as $room)
+                            <tr>
+                                <th scope="row">{{ ( $loop -> index+1 ) }}</th>
+                                <td>{{ $room->bino_name }}</td>
+                                <td>{{ $room->viloyat }}</td>
+                                <td>{{ $room->address }}</td>
+                                <td>{{ $room->turi }}</td>
+                                <td>{{ $room->urindiq_son }}</td>
+                                <td>{{ $room->narx }}</td>
+                                <td>{{ $room->email }}</td>
+                                <td>{{ $room->phone_number }}</td>
+                                <td>{{ $room->wi_fi }}</td>
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>
 			</div>
 			<div class="section-top-border">
 				<h3>Image Gallery</h3>

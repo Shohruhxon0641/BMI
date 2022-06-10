@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Room;
 
 class UserController extends Controller
 {
@@ -14,10 +15,14 @@ class UserController extends Controller
     public function index()
     {
         // $companies = Company::orderByDesc('created_at')->paginate(20);
+        $rooms = Room::All();
 
         return view('users.index',[
-            'metaTitle' => 'Users Room List'
+            'metaTitle' => 'Users Room List',
+            'rooms' => $rooms
         ]);
+
+        // dd($rooms);
     }
 
     /**
@@ -40,7 +45,7 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        
+
     }
 
     /**
