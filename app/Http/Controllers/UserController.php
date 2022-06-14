@@ -15,7 +15,7 @@ class UserController extends Controller
     public function index()
     {
         // $companies = Company::orderByDesc('created_at')->paginate(20);
-        $rooms = Room::orderByDesc('created_at')->paginate(20);
+        $rooms = Room::orderByDesc('created_at')->paginate(10);
 
         return view('users.index',[
             'metaTitle' => 'Users Room List',
@@ -46,6 +46,9 @@ class UserController extends Controller
     public function store(Request $request)
     {
         // dd($request->All());
+        // $this->validate($request, [
+        //     'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        // ]);
 
         $room = new Room;
 
@@ -66,10 +69,23 @@ class UserController extends Controller
         $room->ovoz_kuch = $request['o_kuch']? true : false;
         $room->kompyuter = $request['computer']? true : false;
         $room->ovqatlanish = $request['ovqat']? true : false;
-        $room->image = $request['image'];
+
+        $fileUpload = $request->file('image');
+        if($request -> has('image')){
+            // $fileName = time().$fileUpload->getClientOriginalName();
+            // $path = $fileUpload->storeAs('images', $fileName, 'public');
+            // $room->image = '/storage/'.$path;
+
+            $destinationPath = 'images/';
+            $profileImage = date('YmdHis') . "." . $fileUpload->getClientOriginalExtension();
+            $fileUpload->move($destinationPath, $profileImage);
+            $room->image = "$profileImage";
+        }
+
         $room->save();
 
         return redirect()->route('users.index');
+
     }
 
     /**

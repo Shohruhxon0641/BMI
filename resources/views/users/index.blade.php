@@ -71,7 +71,7 @@
                                 <td>{{ $room->email }}</td>
                                 <td>{{ $room->phone_number }}</td>
                                 <td>
-                                    <i class="bi {{ $room->cofe_tea ? 'bi-cup' : '' }}"></i>
+                                    <i class="bi {{ $room->cofe_tea ? 'bi-cup-fill' : '' }}"></i>
                                     <i class="bi {{ $room->sovutish ? 'bi-thermometer-snow' : '' }}"></i>
                                     <i class="bi {{ $room->wi_fi ? 'bi-wifi' : '' }}"></i>
                                     <i class="bi {{ $room->hojatxona ? 'bi-file-person' : '' }}"></i>
@@ -86,19 +86,14 @@
                 </table>
                 {{ $rooms->links() }}
 			</div>
-			<div class="section-top-border">
+            <div class="section-top-border">
 				<h3>Image Gallery</h3>
 				<div class="row gallery-item">
-					<div class="col-md-4">
-						<a href="{{ asset('assets/img/elements/g1.jpg') }}" class="img-pop-up">
-							<div class="single-gallery-image" style="background: url({{ asset('assets/img/elements/g1.jpg') }});"></div>
-						</a>
-					</div>
-					<div class="col-md-4">
-						<a href="{{ asset('assets/img/elements/g2.jpg') }}" class="img-pop-up">
-							<div class="single-gallery-image" style="background: url({{ asset('assets/img/elements/g2.jpg') }});"></div>
-						</a>
-					</div>
+					@foreach($rooms as $room)
+                        <div class="col-md-4">
+                            <img src="/images/{{ $room->image }}" alt="" width="300px">
+                        </div>
+                    @endforeach
 					<div class="col-md-4">
 						<a href="{{ asset('assets/img/elements/g3.jpg') }}" class="img-pop-up">
 							<div class="single-gallery-image" style="background: url({{ asset('assets/img/elements/g3.jpg') }});"></div>

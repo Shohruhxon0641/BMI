@@ -8,7 +8,7 @@
                 <h3 class="exp_title" style="color: #f9f9ff;">Majlis xonasini qo'shish</h3>
                 <div class="filter_main_wrap">
                     <div class="filter_inner">
-                        <form action="{{ route('users.store') }}" method="post">
+                        <form action="{{ route('users.store') }}" method="post" enctype="multipart/form-data">
                             @csrf
                             <div class="input_field">
                                 <input type="text" name="bino_name" placeholder="Tashkilot yoki bino nomi"
