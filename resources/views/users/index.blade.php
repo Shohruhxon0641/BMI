@@ -70,11 +70,21 @@
                                 <td>{{ $room->narx }}</td>
                                 <td>{{ $room->email }}</td>
                                 <td>{{ $room->phone_number }}</td>
-                                <td>{{ $room->wi_fi }}</td>
+                                <td>
+                                    <i class="bi {{ $room->cofe_tea ? 'bi-cup' : '' }}"></i>
+                                    <i class="bi {{ $room->sovutish ? 'bi-thermometer-snow' : '' }}"></i>
+                                    <i class="bi {{ $room->wi_fi ? 'bi-wifi' : '' }}"></i>
+                                    <i class="bi {{ $room->hojatxona ? 'bi-file-person' : '' }}"></i>
+                                    <i class="bi {{ $room->proyektr ? 'bi-projector' : '' }}"></i>
+                                    <i class="bi {{ $room->ovoz_kuch ? 'bi-volume-up-fill' : '' }}"></i>
+                                    <i class="bi {{ $room->kompyuter ? 'bi-pc-display' : '' }}"></i>
+                                    <i class="bi {{ $room->ovqatlanish ? 'bi-egg-fried' : '' }}"></i>
+                                </td>
                             </tr>
                         @endforeach
                     </tbody>
                 </table>
+                {{ $rooms->links() }}
 			</div>
 			<div class="section-top-border">
 				<h3>Image Gallery</h3>

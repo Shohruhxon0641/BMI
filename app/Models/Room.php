@@ -12,5 +12,15 @@ class Room extends Model
     // table rooms
 
     protected $table = 'rooms';
-    
+
+    protected $casts = [
+        'cofe_tea' => 'boolean',
+        'sovutish' => 'boolean',
+        'wi_fi' => 'boolean',
+        'hojathona' => 'boolean',
+        'proyektr' => 'boolean',
+        'ovoz_kuch' => 'boolean',
+        'kompyuter' => 'boolean',
+        'ovqatlanish' => 'boolean'
+    ];
 }
