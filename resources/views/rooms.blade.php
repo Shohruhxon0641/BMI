@@ -121,7 +121,7 @@
                                                 <i class="flaticon-beach"></i>
                                             </div>
                                             <div class="explorer_info">
-                                                <h3><a href="single_listings.html">Saintmartine</a></h3>
+                                                <h3><a href="{{ url('/singleList') }}">Saintmartine</a></h3>
                                                 <p>700/D, Kings road, Green lane, London</p>
                                                 <ul>
                                                     <li> <i class="fa fa-phone"></i>
@@ -142,7 +142,7 @@
                                                 <i class="flaticon-food"></i>
                                             </div>
                                             <div class="explorer_info">
-                                                <h3><a href="single_listings.html">Freshly Food</a></h3>
+                                                <h3><a href="{{ url('/singleList') }}">Freshly Food</a></h3>
                                                 <p>700/D, Kings road, Green lane, London</p>
                                                 <ul>
                                                     <li> <i class="fa fa-phone"></i>
@@ -163,7 +163,7 @@
                                                 <i class="flaticon-food-1"></i>
                                             </div>
                                             <div class="explorer_info">
-                                                <h3><a href="single_listings.html">Midnight</a></h3>
+                                                <h3><a href="{{ url('/singleList') }}">Midnight</a></h3>
                                                 <p>700/D, Kings road, Green lane, London</p>
                                                 <ul>
                                                     <li> <i class="fa fa-phone"></i>
@@ -184,7 +184,7 @@
                                                 <i class="flaticon-barbershop"></i>
                                             </div>
                                             <div class="explorer_info">
-                                                <h3><a href="single_listings.html">Barber</a></h3>
+                                                <h3><a href="{{ url('/singleList') }}">Barber</a></h3>
                                                 <p>700/D, Kings road, Green lane, London</p>
                                                 <ul>
                                                     <li> <i class="fa fa-phone"></i>
@@ -205,7 +205,7 @@
                                                 <i class="flaticon-cabin"></i>
                                             </div>
                                             <div class="explorer_info">
-                                                <h3><a href="single_listings.html">Montana Resort</a></h3>
+                                                <h3><a href="{{ url('/singleList') }}">Montana Resort</a></h3>
                                                 <p>700/D, Kings road, Green lane, London</p>
                                                 <ul>
                                                     <li> <i class="fa fa-phone"></i>
@@ -226,7 +226,7 @@
                                                 <i class="flaticon-shop"></i>
                                             </div>
                                             <div class="explorer_info">
-                                                <h3><a href="single_listings.html">Yelled Shopping</a></h3>
+                                                <h3><a href="{{ url('/singleList') }}">Yelled Shopping</a></h3>
                                                 <p>700/D, Kings road, Green lane, London</p>
                                                 <ul>
                                                     <li> <i class="fa fa-phone"></i>

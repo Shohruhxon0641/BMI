@@ -21,14 +21,14 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    
+
     public function index()
     {
-        return view('home', ['metaTitle' => 'Home']);
+        return view('home', ['metaTitle' => 'Asosiy sahifa']);
     }
     public function rooms()
     {
-        return view('rooms', ['metaTitle' =>'Rooms']);
+        return view('rooms', ['metaTitle' =>'Xonalar']);
     }
     public function about()
     {
@@ -40,7 +40,7 @@ class HomeController extends Controller
     }
     public function elements()
     {
-        return view('elements', ['metaTitle' => 'Element list']);
+        return view('elements', ['metaTitle' => 'Elementlar']);
     }
     public function singleList()
     {
@@ -48,10 +48,10 @@ class HomeController extends Controller
     }
     public function blog()
     {
-        return view('blog', ['metaTitle' => 'About Rooms']);
+        return view('blog', ['metaTitle' => 'Xona haqida']);
     }
     public function singleBlog()
     {
-        return view('singleBlog', ['metaTitle' => 'Room Commits']);
+        return view('singleBlog', ['metaTitle' => 'Fikrlar']);
     }
 }

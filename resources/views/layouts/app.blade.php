@@ -8,7 +8,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ $metaTitle ?? config('app.name','Laravel') }}</title>
+    <title>{{ $metaTitle ?? config('app.name','Meeting room booking') }}</title>
     <!-- <title>Directory</title> -->
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">

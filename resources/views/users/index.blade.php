@@ -56,6 +56,7 @@
                             <th scope="col">Email</th>
                             <th scope="col">Tel:</th>
                             <th scope="col">Imkoniyatlari</th>
+
                         </tr>
                     </thead>
                     <tbody>
@@ -71,15 +72,18 @@
                                 <td>{{ $room->email }}</td>
                                 <td>{{ $room->phone_number }}</td>
                                 <td>
-                                    <i class="bi {{ $room->cofe_tea ? 'bi-cup-fill' : '' }}"></i>
-                                    <i class="bi {{ $room->sovutish ? 'bi-thermometer-snow' : '' }}"></i>
-                                    <i class="bi {{ $room->wi_fi ? 'bi-wifi' : '' }}"></i>
-                                    <i class="bi {{ $room->hojatxona ? 'bi-file-person' : '' }}"></i>
-                                    <i class="bi {{ $room->proyektr ? 'bi-projector' : '' }}"></i>
-                                    <i class="bi {{ $room->ovoz_kuch ? 'bi-volume-up-fill' : '' }}"></i>
-                                    <i class="bi {{ $room->kompyuter ? 'bi-pc-display' : '' }}"></i>
-                                    <i class="bi {{ $room->ovqatlanish ? 'bi-egg-fried' : '' }}"></i>
+                                    <a href="{{ route('users.show', $room->id) }}" >
+                                        <i class="bi {{ $room->cofe_tea ? 'bi-cup-fill' : '' }}"></i>
+                                        <i class="bi {{ $room->sovutish ? 'bi-thermometer-snow' : '' }}"></i>
+                                        <i class="bi {{ $room->wi_fi ? 'bi-wifi' : '' }}"></i>
+                                        <i class="bi {{ $room->hojatxona ? 'bi-file-person' : '' }}"></i>
+                                        <i class="bi {{ $room->proyektr ? 'bi-projector' : '' }}"></i>
+                                        <i class="bi {{ $room->ovoz_kuch ? 'bi-volume-up-fill' : '' }}"></i>
+                                        <i class="bi {{ $room->kompyuter ? 'bi-pc-display' : '' }}"></i>
+                                        <i class="bi {{ $room->ovqatlanish ? 'bi-egg-fried' : '' }}"></i>
+                                    </a>
                                 </td>
+
                             </tr>
                         @endforeach
                     </tbody>

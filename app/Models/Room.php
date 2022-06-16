@@ -23,4 +23,6 @@ class Room extends Model
         'kompyuter' => 'boolean',
         'ovqatlanish' => 'boolean'
     ];
+
+    protected $guarded = [];
 }

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Room;
+use Image;
 
 class UserController extends Controller
 {
@@ -18,7 +19,7 @@ class UserController extends Controller
         $rooms = Room::orderByDesc('created_at')->paginate(10);
 
         return view('users.index',[
-            'metaTitle' => 'Users Room List',
+            'metaTitle' => "User xonalar ro'yhati",
             'rooms' => $rooms
         ]);
 
@@ -33,7 +34,7 @@ class UserController extends Controller
     public function create()
     {
         return view('users.create', [
-            'metaTitle' => 'Room create'
+            'metaTitle' => "Xona qo'shish"
         ]);
     }
 
@@ -50,6 +51,11 @@ class UserController extends Controller
         //     'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         // ]);
 
+            //////////////////////// Shu yerda soddaroq kod ////////////////////////////////////
+        // $room = $request->All();
+        // Room::create($room);
+
+            ///// eski kod / /////
         $room = new Room;
 
         $room->user_id = 0;
@@ -72,12 +78,20 @@ class UserController extends Controller
 
         $fileUpload = $request->file('image');
         if($request -> has('image')){
+            $destinationPath = 'images/';
+            $profileImage = date('YmdHis') . "." . $fileUpload->getClientOriginalExtension();
             // $fileName = time().$fileUpload->getClientOriginalName();
             // $path = $fileUpload->storeAs('images', $fileName, 'public');
             // $room->image = '/storage/'.$path;
 
-            $destinationPath = 'images/';
-            $profileImage = date('YmdHis') . "." . $fileUpload->getClientOriginalExtension();
+            /////////    thumbnail image   error /////////
+            // $destinationPathThumbnail = storage_path('/thumbnail');
+            // $img = Image::make($fileUpload->path());
+            // $img->resize(100, 100, function ($constraint) {
+            //     $constraint->aspectRatio();
+            // })->save($destinationPathThumbnail.'/'.$profileImage);
+            ///////////////////////////////////
+
             $fileUpload->move($destinationPath, $profileImage);
             $room->image = "$profileImage";
         }
@@ -96,7 +110,11 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        //
+        $room = Room::find($id);
+        // return view('users.show', compact('id'));
+        return view('users.show', [
+            'room' => $room
+        ]);
     }
 
     /**
@@ -107,7 +125,7 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('users.edit', compact('id'));
     }
 
     /**
@@ -130,6 +148,8 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $id->delete();
+
+        return redirect()->route('users.index');
     }
 }
