@@ -71,16 +71,10 @@
                                 <div class="main-menu  d-none d-lg-block">
                                     <nav>
                                         <ul id="navigation">
-                                            <li><a href="{{ url('/home') }}">{{__('Home')}}</a></li>
+                                        
                                             <li><a href="{{ url('/users ') }}">{{__('Users')}}</a></li>
                                             <li><a href="{{ url('/rooms') }}">{{__('Xonalar')}}</a></li>
-                                            <li><a href="#">pages <i class="ti-angle-down"></i></a>
-                                                <ul class="submenu">
 
-                                                    <li><a href="{{ url('/elements') }}">{{__('Elementlar')}}</a></li>
-                                                    <li><a href="{{ url('/singleList') }}">{{__("Maxsus ro'yhat")}}</a></li>
-                                                </ul>
-                                            </li>
                                             <li><a href="{{ url('/about') }}">{{__('About')}}</a></li>
                                             <li><a href="#">blog <i class="ti-angle-down"></i></a>
                                                 <ul class="submenu">

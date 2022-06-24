@@ -114,7 +114,7 @@
                             <div class="col-xl-3 col-lg-3 col-md-6">
                                 <div class="single_team">
                                     <div class="team_thumb">
-                                        <img src="{{ asset('assets/img/team/1.png') }}" alt="">
+                                        <img src="{{ asset('assets/img/team/maftuna.jpg') }}" alt="">
                                         <div class="social_link">
                                                 <ul>
                                                     <li><a href="#">

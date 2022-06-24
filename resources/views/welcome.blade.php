@@ -10,7 +10,7 @@
                     <div class="col-xl-10">
                         <div class="slider_text text-center justify-content-center">
                             <p>Meeting room booking</p>
-                            <h3>Majlislar honasini bron qilish</h3>
+                            <h3>Majlislar Xonasini bron qilish</h3>
                             <div class="search_form">
                                 <form action="#">
                                     <div class="row align-items-center">
@@ -31,28 +31,6 @@
                                         </div>
                                     </div>
                                 </form>
-                            </div>
-                            <div class="quality">
-                                <ul>
-                                    <li>
-                                        <button>Hotel</button>
-                                    </li>
-                                    <li>
-                                        <button>Food</button>
-                                    </li>
-                                    <li>
-                                        <button>Shopping</button>
-                                    </li>
-                                    <li>
-                                        <button>Bar & Pubs</button>
-                                    </li>
-                                    <li>
-                                        <button>Bar & Pubs</button>
-                                    </li>
-                                    <li>
-                                        <button>Places</button>
-                                    </li>
-                                </ul>
                             </div>
                         </div>
                     </div>
@@ -83,7 +61,7 @@
                         <div class="hover_overlay">
                             <div class="hover_inner">
                                 <a href="{{ url('/rooms') }}"><h4>Ajoyib joylar</h4></a>
-                                <span>05 Ro'yhatlar</span>
+                                <span>Ro'yhatlar</span>
                             </div>
                         </div>
                     </div>
@@ -96,7 +74,7 @@
                         <div class="hover_overlay">
                             <div class="hover_inner">
                                 <a href="{{ url('/rooms') }}"><h4>Konsertlar</h4></a>
-                                <span>05 Ro'yhatlar</span>
+                                <span>Ro'yhatlar</span>
                             </div>
                         </div>
                     </div>
@@ -109,7 +87,7 @@
                         <div class="hover_overlay">
                             <div class="hover_inner">
                                     <a href="{{ url('/rooms') }}"><h4>Sayohat bo'yicha qo'llanma</h4></a>
-                                <span>05 Ro'yhatlar</span>
+                                <span>Ro'yhatlar</span>
                             </div>
                         </div>
                     </div>
@@ -122,7 +100,7 @@
                         <div class="hover_overlay">
                             <div class="hover_inner">
                                     <a href="{{ url('/rooms') }}"><h4>Musiqa festivali</h4></a>
-                                <span>05 Ro'yhatlar</span>
+                                <span>Ro'yhatlar</span>
                             </div>
                         </div>
                     </div>
@@ -135,7 +113,7 @@
                         <div class="hover_overlay">
                             <div class="hover_inner">
                                     <a href="{{ url('/rooms') }}"><h4>Tungi klub</h4></a>
-                                <span>05 Ro'yhatlar</span>
+                                <span>Ro'yhatlar</span>
                             </div>
                         </div>
                     </div>
@@ -148,7 +126,7 @@
                         <div class="hover_overlay">
                             <div class="hover_inner">
                                     <a href="{{ url('/rooms') }}"><h4>Barlar</h4></a>
-                                <span>05 Ro'yhatlar</span>
+                                <span>Ro'yhatlar</span>
                             </div>
                         </div>
                     </div>
@@ -161,7 +139,7 @@
                         <div class="hover_overlay">
                             <div class="hover_inner">
                                     <a href="{{ url('/rooms') }}"><h4>Kafe</h4></a>
-                                <span>05 Ro'yhatlar</span>
+                                <span>Ro'yhatlar</span>
                             </div>
                         </div>
                     </div>
@@ -174,7 +152,7 @@
                         <div class="hover_overlay">
                             <div class="hover_inner">
                                     <a href="{{ url('/rooms') }}"><h4>Restoranlar</h4></a>
-                                <span>05 Ro'yhatlar</span>
+                                <span>Ro'yhatlar</span>
                             </div>
                         </div>
                     </div>
@@ -218,48 +196,30 @@
             <div class="tab-content" id="nav-tabContent">
                 <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                     <div class="row">
-                        <div class="col-xl-4 col-lg-4 col-md-6">
-                            <div class="single_explorer">
-                                <div class="thumb">
-                                    <img src="{{asset('assets/img/explorer/1.png')}}" alt="">
-                                </div>
-                                <div class="explorer_bottom d-flex">
-                                    <div class="icon">
-                                        <i class="flaticon-beach"></i>
+
+                        @foreach($rooms as $room)
+                            <div class="col-xl-4 col-lg-4 col-md-6">
+                                <div class="single_explorer">
+                                    <div class="thumb">
+                                        <img src="{{ $room->image }}" alt="">
                                     </div>
-                                    <div class="explorer_info">
-                                        <h3><a href="{{ url('/singleList') }}">Saintmartine</a></h3>
-                                        <p>700/D, Kings road, Green lane, London</p>
-                                        <ul>
-                                            <li> <i class="fa fa-phone"></i>
-                                                +10 278 367 9823</li>
-                                            <li><i class="fa fa-envelope"></i> contact@midnight.com</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 col-lg-4 col-md-6">
-                            <div class="single_explorer">
-                                <div class="thumb">
-                                    <img src="{{asset('assets/img/explorer/2.png')}}" alt="">
-                                </div>
-                                <div class="explorer_bottom d-flex">
-                                    <div class="icon">
-                                        <i class="flaticon-food"></i>
-                                    </div>
-                                    <div class="explorer_info">
-                                        <h3><a href="{{ url('/singleList') }}">Freshly Food</a></h3>
-                                        <p>700/D, Kings road, Green lane, London</p>
-                                        <ul>
-                                            <li> <i class="fa fa-phone"></i>
-                                                +10 278 367 9823</li>
-                                            <li><i class="fa fa-envelope"></i> contact@midnight.com</li>
-                                        </ul>
+                                    <div class="explorer_bottom d-flex">
+                                        <div class="icon">
+                                            <i class="bi bi-people-fill"></i>
+                                        </div>
+                                        <div class="explorer_info">
+                                            <h3><a href="{{ url('comment', $room->id ) }}">{{ $room->bino_name }}</a></h3>
+                                            <p>{{ $room->address }}</p>
+                                            <ul>
+                                                <li> <i class="fa fa-phone"></i>
+                                                    {{ $room->phone_number }}</li>
+                                                <li><i class="fa fa-envelope"></i> {{ $room->email }}</li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        @endforeach
                         <div class="col-xl-4 col-lg-4 col-md-6">
                             <div class="single_explorer">
                                 <div class="thumb">

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Room;
+use App\Models\Commit;
+use App\Models\BronRoom;
 use Image;
 
 class UserController extends Controller
@@ -46,57 +48,18 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        // dd($request->All());
-        // $this->validate($request, [
-        //     'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-        // ]);
-
-            //////////////////////// Shu yerda soddaroq kod ////////////////////////////////////
-        // $room = $request->All();
-        // Room::create($room);
-
-            ///// eski kod / /////
-        $room = new Room;
-
-        $room->user_id = 0;
-        $room->bino_name = $request['bino_name'];
-        $room->turi = $request['tur'];
-        $room->urindiq_son = $request['u_son'];
-        $room->narx = $request['narx'];
-        $room->viloyat = $request['viloyat'];
-        $room->address = $request['address'];
-        $room->phone_number = $request['phoneNumber'];
-        $room->email = $request['email'];
-        $room->cofe_tea = $request['cofe']? true : false;
-        $room->sovutish = $request['sovutish'] ? true : false;
-        $room->wi_fi = $request['wi_fi']? true : false;
-        $room->hojatxona = $request['hojathona']? true : false;
-        $room->proyektr = $request['proyektr']? true : false;
-        $room->ovoz_kuch = $request['o_kuch']? true : false;
-        $room->kompyuter = $request['computer']? true : false;
-        $room->ovqatlanish = $request['ovqat']? true : false;
+        $room = $request->All();
 
         $fileUpload = $request->file('image');
         if($request -> has('image')){
             $destinationPath = 'images/';
             $profileImage = date('YmdHis') . "." . $fileUpload->getClientOriginalExtension();
-            // $fileName = time().$fileUpload->getClientOriginalName();
-            // $path = $fileUpload->storeAs('images', $fileName, 'public');
-            // $room->image = '/storage/'.$path;
-
-            /////////    thumbnail image   error /////////
-            // $destinationPathThumbnail = storage_path('/thumbnail');
-            // $img = Image::make($fileUpload->path());
-            // $img->resize(100, 100, function ($constraint) {
-            //     $constraint->aspectRatio();
-            // })->save($destinationPathThumbnail.'/'.$profileImage);
-            ///////////////////////////////////
-
             $fileUpload->move($destinationPath, $profileImage);
-            $room->image = "$profileImage";
+            $room['image'] = "/"."$destinationPath"."$profileImage";
         }
 
-        $room->save();
+
+        Room::create($room);
 
         return redirect()->route('users.index');
 
@@ -110,7 +73,7 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        $room = Room::find($id);
+        $room = Room::findOrFail($id);
         // return view('users.show', compact('id'));
         return view('users.show', [
             'room' => $room
@@ -125,7 +88,10 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        return view('users.edit', compact('id'));
+        $room = Room::findOrFail($id);
+        return view('users.edit', [
+            'room' => $room
+        ]);
     }
 
     /**
@@ -137,7 +103,24 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $room = $request->All();
+
+        $fileUpload = $request->file('image');
+        if($request -> has('image')){
+            $destinationPath = 'images/';
+            $profileImage = date('YmdHis') . "." . $fileUpload->getClientOriginalName();
+            $fileUpload->move($destinationPath, $profileImage);
+            $room['image'] = "$profileImage";
+        } else {
+            unset($room['image']);
+        }
+
+
+        $id->update($room);
+        // Room::update($room);
+        // $room->save;
+
+        return redirect()->route('users.index');
     }
 
     /**

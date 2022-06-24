@@ -113,7 +113,7 @@
 
 <!-- yangi create list -->
 <div class="container p-3">
-    <h1>Hello world</h1>
+    <h1>Mavjud xonalarni foydalanish uchun ro'yhatdan o'tkazish </h1>
     <form class="row g-3" action="{{ route('users.store') }}" method="post" enctype="multipart/form-data">
         @csrf
         <div class="col-md-6">
@@ -122,7 +122,7 @@
         </div>
         <div class="col-md-6">
             <label for="selectTur" class="form-label">Xona kategoriyalarni tanlang</label>
-            <select class="form-select" aria-label="Xona kategoriyalarni tanlang" name="tur" id="selectTur">
+            <select class="form-select" aria-label="Xona kategoriyalarni tanlang" name="turi" id="selectTur">
                 <option value="oddiy" selected>Oddiy</option>
                 <option value="urta">O'rta</option>
                 <option value="maxsus">Maxsus</option>
@@ -149,29 +149,29 @@
         </div>
         <div class="col-md-6">
             <label for="inputPhoneNumber" class="form-label">Phone Number</label>
-            <input type="phoneNumber" name="phoneNumber" class="form-control" id="inputPhoneNumber">
+            <input type="phoneNumber" name="phone_number" class="form-control" id="inputPhoneNumber">
         </div>
 
         <div class="col-md-6">
+            <label for="urindiq-soni" class="form-label">O'rindiqlar soni</label>
+            <div class="input-group ">
+                <span class="input-group-text"><i class="bi bi-people-fill"></i></span>
+                <input type="text" name="urindiq_son" id="urindiq-soni" class="form-control" aria-label="Amount (to the nearest dollar)">
+            </div>
             <label for="narx" class="form-label">1 soat uchun qo'yiladigan narx</label>
             <div class="input-group">
                 <span class="input-group-text">$</span>
                 <input type="text" name="narx" class="form-control" id="narx" aria-label="Amount (to the nearest dollar)">
             </div>
-            <label for="urindiq-soni" class="form-label">O'rindiqlar soni</label>
-            <div class="input-group ">
-                <span class="input-group-text"><i class="bi bi-people-fill"></i></span>
-                <input type="text" name="u_son" id="urindiq-soni" class="form-control" aria-label="Amount (to the nearest dollar)">
-            </div>
             <label for="" class="form-label">Qo'shimcha sharoitlar:</label>
             <div class="inner d-flex" id="imkoniyatlar">
                 <div class="input_field " >
                     <div class="check_1">
-                        <input type="checkbox" id="fruit1" name="cofe" value="1">
+                        <input type="checkbox" id="fruit1" name="cofe_tea" value="1">
                         <label for="fruit1" >Coffee / Choy <i class="bi bi-cup-fill"></i></label>
                     </div>
                     <div class="check_1">
-                        <input type="checkbox" id="fruit2" name="ovqat" value="1">
+                        <input type="checkbox" id="fruit2" name="ovqatlanish" value="1">
                         <label for="fruit2" >Ovqatlanish imkoniyati <i class="bi bi-egg-fried"></i></label>
                     </div>
                     <div class="check_1">
@@ -179,7 +179,7 @@
                         <label for="fruit3" >Konditsioner  <i class="bi bi-thermometer-snow"></i></label>
                     </div>
                     <div class="check_1">
-                        <input type="checkbox" id="fruit4" name="hojathona" value="1">
+                        <input type="checkbox" id="fruit4" name="hojatxona" value="1">
                         <label for="fruit4" >Hojatxona  <i class="bi bi-file-person"></i></label>
                     </div>
                 </div>
@@ -193,11 +193,11 @@
                         <label for="fruit6" >Wi-fi  <i class="bi bi-wifi"></i></label>
                     </div>
                     <div class="check_1">
-                        <input type="checkbox" id="fruit7" name="o_kuch" value="1">
+                        <input type="checkbox" id="fruit7" name="ovoz_kuch" value="1">
                         <label for="fruit7" >Ovoz kuchaytirgich  <i class="bi bi-volume-up-fill"></i></label>
                     </div>
                     <div class="check_1">
-                        <input type="checkbox" id="fruit8" name="computer" value="1">
+                        <input type="checkbox" id="fruit8" name="kompyuter" value="1">
                         <label for="fruit8" >Kompyuterlar xizmati <i class="bi bi-pc-display"></i></label>
                     </div>
                 </div>
@@ -206,7 +206,7 @@
         <div class="col-md-6">
             <label for="Image" class="form-label">Photo room</label>
             <div class="">
-                <img src="/images/20220614192352.jpg" alt="" class="w-100">
+                <img src="/images/no image.png" alt="" class="w-100">
             </div>
             <div class="mt-3">
                 <input type="file" id="inputImage" name="image" class="form-control">

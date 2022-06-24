@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Room;
+use App\Models\Commit;
+use App\Models\BronRoom;
 
 class HomeController extends Controller
 {
@@ -24,11 +27,20 @@ class HomeController extends Controller
 
     public function index()
     {
-        return view('home', ['metaTitle' => 'Asosiy sahifa']);
+        $rooms = Room::orderByDesc('created_at')->paginate(6);
+        // dd($rooms);
+        return view('welcome', [
+            'metaTitle' => 'Asosiy sahifa',
+            'rooms' => $rooms
+        ]);
     }
     public function rooms()
     {
-        return view('rooms', ['metaTitle' =>'Xonalar']);
+        $rooms = Room::orderByDesc('created_at')->paginate(10);
+        return view('rooms', [
+            'metaTitle' =>'Xonalar',
+            'rooms' =>$rooms
+        ]);
     }
     public function about()
     {
@@ -38,20 +50,18 @@ class HomeController extends Controller
     {
         return view('contact', ['metaTitle' => 'Contact']);
     }
-    public function elements()
-    {
-        return view('elements', ['metaTitle' => 'Elementlar']);
-    }
-    public function singleList()
-    {
-        return view('singleList', ['metaTitle' => 'Maxsus Ro\'yxat']);
-    }
+
     public function blog()
     {
         return view('blog', ['metaTitle' => 'Xona haqida']);
     }
-    public function singleBlog()
+    public function singleBlog($id)
     {
-        return view('singleBlog', ['metaTitle' => 'Fikrlar']);
+        $room = Room::findOrFail($id);
+
+        return view('singleBlog', [
+            'metaTitle' => 'Fikrlar',
+            'room' => $room
+        ]);
     }
 }

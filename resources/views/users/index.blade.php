@@ -21,28 +21,6 @@
 
 			<div class="section-top-border">
 				<h3 class="mb-30">Table</h3>
-				<!-- <div class="progress-table-wrap">
-					<div class="progress-table">
-
-						<div class="table-head">
-							<div class="serial">T/R</div>
-							<div class="country">Bino nomi</div>
-							<div class="visit">State</div>
-							<div class="percentage">NARXI</div>
-                            <div class="visit">State</div>
-                            <div class="visit">State</div>
-						</div>
-
-                        @foreach($rooms as $room)
-                            <div class="table-row">
-                                <div class="serial">{{($loop -> index+1)}}</div>
-                                <div class="country"> {{$room -> bino_name}}</div>
-                                <div class="visit">{{$room -> viloyat}}</div>
-                                <div class="percentage">{{$room -> narx}}</div>
-                            </div>
-                        @endforeach
-					</div>
-				</div> -->
                 <table class="table table-bordered table-hover table-striped">
                     <thead>
                         <tr>
@@ -62,7 +40,8 @@
                     <tbody>
                         @foreach($rooms as $room)
                             <tr>
-                                <th scope="row">{{ ( $loop -> index+1 ) }}</th>
+                                <!-- <th scope="row">{{ (($rooms->currentpage()-1)*$rooms->perpage()+($loop->index+1)) }}</th> -->
+                                <th scope="row">{{ $room->id }}</th>
                                 <td>{{ $room->bino_name }}</td>
                                 <td>{{ $room->viloyat }}</td>
                                 <td>{{ $room->address }}</td>
@@ -95,39 +74,9 @@
 				<div class="row gallery-item">
 					@foreach($rooms as $room)
                         <div class="col-md-4">
-                            <img src="/images/{{ $room->image }}" alt="" width="300px">
+                            <img src="{{ $room->image }}" alt="" width="300px">
                         </div>
                     @endforeach
-					<div class="col-md-4">
-						<a href="{{ asset('assets/img/elements/g3.jpg') }}" class="img-pop-up">
-							<div class="single-gallery-image" style="background: url({{ asset('assets/img/elements/g3.jpg') }});"></div>
-						</a>
-					</div>
-					<div class="col-md-6">
-						<a href="{{ asset('assets/img/elements/g4.jpg') }}" class="img-pop-up">
-							<div class="single-gallery-image" style="background: url({{ asset('assets/img/elements/g4.jpg') }});"></div>
-						</a>
-					</div>
-					<div class="col-md-6">
-						<a href="{{ asset('assets/img/elements/g5.jpg') }}" class="img-pop-up">
-							<div class="single-gallery-image" style="background: url({{ asset('assets/img/elements/g5.jpg') }});"></div>
-						</a>
-					</div>
-					<div class="col-md-4">
-						<a href="{{ asset('assets/img/elements/g6.jpg') }}" class="img-pop-up">
-							<div class="single-gallery-image" style="background: url({{ asset('assets/img/elements/g6.jpg') }});"></div>
-						</a>
-					</div>
-					<div class="col-md-4">
-						<a href="{{ asset('assets/img/elements/g7.jpg') }}" class="img-pop-up">
-							<div class="single-gallery-image" style="background: url({{ asset('assets/img/elements/g7.jpg') }});"></div>
-						</a>
-					</div>
-					<div class="col-md-4">
-						<a href="{{ asset('assets/img/elements/g8.jpg') }}" class="img-pop-up">
-							<div class="single-gallery-image" style="background: url({{ asset('assets/img/elements/g8.jpg') }});"></div>
-						</a>
-					</div>
 				</div>
 			</div>
 		</div>

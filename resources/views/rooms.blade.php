@@ -49,89 +49,67 @@
                             <div class="filter_inner">
                                 <form action="#">
                                     <div class="input_field">
-                                        <input type="text" placeholder="What are you finding?" >
+                                        <input type="text" placeholder="Qanday xona qidiryapsiz??" >
                                         <button class="submit_btn" type="submit"> <i class="fa fa-search"></i> </button>
                                     </div>
                                     <div class="input_field">
-                                        <select class="wide">
-                                            <option data-display="Choose categories">cat 1</option>
-                                            <option value="1">cat 2</option>
-                                            <option value="2">cat 3</option>
-                                            <option value="3">cat 4</option>
+                                        <select class="wide" aria-label="Xona kategoriyalarni tanlang" name="turi" id="selectTur">
+                                            <option value="oddiy" selected>Oddiy</option>
+                                            <option value="urta">O'rta</option>
+                                            <option value="maxsus">Maxsus</option>
                                         </select>
                                     </div>
                                     <div class="input_field">
-                                        <select class="wide">
-                                            <option data-display="Location">USA</option>
-                                            <option value="1">Africa</option>
-                                            <option value="2">canada</option>
+                                        <select class="wide" aria-label="Viloyat nomi" name="viloyat" id="selectViloyat">
+                                            <option value="Toshkent" selected >Toshkent</option>
+                                            <option value="Xorazm">Xorazm</option>
+                                            <option value="Samarqand">Samarqand</option>
+                                            <option value="Buxoro">Buxoro</option>
+                                            <option value="Andijon">Andijon</option>
+                                            <option value="Nukus">Nukus</option>
                                         </select>
                                     </div>
-                                    <div class="input_field ">
-                                        <div class="inner">
-                                            <div class="check_1">
-                                                <input type="checkbox" id="fruit1" name="fruit-1" value="Apple">
-                                                <label for="fruit1">Open Now</label>
-                                            </div>
-                                            <div class="check_1">
-                                                <input type="checkbox" id="fruit4" name="fruit-4" value="Strawberry">
-                                                <label for="fruit4">Ratings</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="input_field">
-                                        <select class="wide">
-                                            <option data-display="Area (km)">Area (km)</option>
-                                            <option value="1">1km</option>
-                                            <option value="2">2km</option>
-                                        </select>
-                                    </div>
-                                    <div class="input_field">
-                                        <select class="wide">
-                                            <option data-display="Area (km)">Area (km)</option>
-                                            <option value="1">1km</option>
-                                            <option value="2">2km</option>
-                                        </select>
-                                    </div>
-
                                 </form>
                             </div>
                             <div class="last_range">
-                                <label for="amount">Price range:</label>
+                                <label for="amount">O'rindiqlar soni:</label>
 
                                 <div id="slider-range"></div>
                                 <p>
                                     <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
                                 </p>
-                                <button class="boxed-btn2" >Reset</button>
+                                <button class="boxed-btn2" >Qidirish</button>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-xl-8 col-lg-8">
-                        <h3 class="exp_title">5432 Listings are available</h3>
+                        <h3 class="exp_title">Mavjud xonalar ro'yhati</h3>
                         <div class="row">
-                                <div class="col-xl-6 col-lg-6 col-md-6">
-                                    <div class="single_explorer">
-                                        <div class="thumb">
-                                            <img src="{{asset('assets/img/explorer/1.png')}}" alt="">
-                                        </div>
-                                        <div class="explorer_bottom d-flex">
-                                            <div class="icon">
-                                                <i class="flaticon-beach"></i>
+                                @foreach($rooms as $room)
+                                    <div class="col-xl-6 col-lg-6 col-md-6">
+                                        <div class="single_explorer">
+                                            <div class="thumb">
+                                                <img src="/images/{{ $room->image }}" alt="">
+                                                <img src="{{ $room->image }}" alt="">
                                             </div>
-                                            <div class="explorer_info">
-                                                <h3><a href="{{ url('/singleList') }}">Saintmartine</a></h3>
-                                                <p>700/D, Kings road, Green lane, London</p>
-                                                <ul>
-                                                    <li> <i class="fa fa-phone"></i>
-                                                        +10 278 367 9823</li>
-                                                    <li><i class="fa fa-envelope"></i> contact@midnight.com</li>
-                                                </ul>
+                                            <div class="explorer_bottom d-flex">
+                                                <div class="icon">
+                                                    <i class="flaticon-beach"></i>
+                                                </div>
+                                                <div class="explorer_info">
+                                                    <h3><a href="{{ url('comment', $room->id) }}">{{ $room->bino_name }}</a></h3>
+                                                    <p>{{ $room-> address }}</p>
+                                                    <ul>
+                                                        <li> <i class="fa fa-phone"></i>
+                                                            {{ $room->phone_number }}</li>
+                                                        <li><i class="fa fa-envelope"></i> {{$room->email}}</li>
+                                                    </ul>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                @endforeach
                                 <div class="col-xl-6 col-lg-6 col-md-6">
                                     <div class="single_explorer">
                                         <div class="thumb">
